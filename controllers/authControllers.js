@@ -3,6 +3,7 @@ const asyncHandler = require("express-async-handler");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 require('dotenv').config();
+const { transporter, sendOTP } = require("../config/emailConfig");
 
 // Controller function for user signup
 exports.signup = asyncHandler (async (req, res) => {
